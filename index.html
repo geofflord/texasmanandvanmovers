@@ -183,7 +183,242 @@ body {
           </div>
           </div>
               <!--banner -->
-                 
+                <div class="card my-4">
+<div class="card-body">
+<div align="center"><a href="https://texasmanandvan.com"><img src="https://texasmanandvan.com/wp-content/uploads/2020/07/Log-with-banner-512-300x300.jpg" width="300"></a></div>
+<div>
+<div align="left">
+<strong>Address</strong><br />
+Texas Man And Van<br />
+(Admin Offices)<br />
+701 Center Ridge Dr<br />
+Austin<br />
+TX 787531<br />
+Tel 737-202-9538<br />
+<br />
+<strong>Hours</strong><br />
+Monday – Friday: 9:00AM–5:00PM<br />
+Sat - Sunday: 11:00AM – 1:00PM<br />
+</div>
+<br />
+<!-- Do not modify the NAME value of any of the INPUT fields the FORM action, or any of the hidden fields (eg. input type=hidden). These are all required for this form to function correctly. -->
+
+<style>
+<p> .myForm td, input, select, textarea, checkbox  {<br />  font-family: tahoma;<br />  font-size: 12px;<br /> }</p>
+<p> .required {<br />  color: red;<br /> }</p>
+</style>
+
+<form id="frmSS1" action="https://ares.texasmanandvan.com/form.php?form=1" method="post">
+<table class="myForm" border="0" cellpadding="2">
+<tbody>
+<tr>
+<td><span class="required">*</span>
+First Name:</td>
+<td><input id="CustomFields_2_1" name="CustomFields[2]" size="12" type="text" value="" /></td>
+</tr>
+<tr>
+<td><span class="required">*</span>Last Name:</td>
+<td><input id="CustomFields_3_1" name="CustomFields[3]" size="10" type="text" value=" " /></td>
+</tr>
+<tr>
+<td><span class="required">*</span>Your email address:</td>
+<td><input name="email" size="10" type="text" value="" /></td>
+</tr>
+<tr>
+<td><span class="required">*</span>Phone:</td>
+<td><input id="CustomFields_4_1" name="CustomFields[4]" size="10" type="text" value="" /></td>
+</tr>
+<tr>
+<td><span class="required">*</span>address:</td>
+<td><input id="CustomFields_12_1" name="CustomFields[12]" size="10" type="text" value="" /></td>
+</tr>
+<tr>
+<td><span class="required">*</span>City:</td>
+<td><input id="CustomFields_8_1" name="CustomFields[8]" size="10" type="text" value="" /></td>
+</tr>
+<tr>
+<td><span class="required">*</span>Postal/Zip Code:</td>
+<td><input id="CustomFields_10_1" name="CustomFields[10]" size="10" type="text" value="" /></td>
+</tr>
+<tr>
+<td><span class="required">*</span>State:</td>
+<td><input id="CustomFields_9_1" name="CustomFields[9]" size="10" type="text" value="" /></td>
+</tr>
+<tr>
+<td>Additional Notes:</td>
+<td><textarea id="CustomFields_13_1" name="CustomFields[13]"></textarea></td>
+</tr>
+<tr>
+<td><span class="required">*</span>
+Enter the security code shown:</td>
+<td><script>
+    var SIDString = '';
+
+    function getRandomLetter() {
+     return String.fromCharCode(getRandom(65, 90));
+    }
+
+    function getRandom(lowerBound, upperBound) {
+     return Math.floor((upperBound - lowerBound + 1) * Math.random() + lowerBound);
+    }
+
+    function SetSID()
+    {
+     if (SIDString.length > 0)
+     {
+      return SIDString;
+     }
+
+     sidc = 0;
+
+     while (sidc < 32)
+     {
+      SIDString = SIDString + getRandomLetter();
+      sidc++;
+     }
+     return SIDString;
+    }
+   </script>
+<script>
+     var url = "https://ares.texasmanandvan.com/admin/resources/form_designs/captcha/index.php?c=" + getRandom(1,1000)+ "&ss=" + SetSID();
+      document.write("<img src='" + url + "' alt='img'/>");
+     </script>
+<input name="captcha" type="text" value="" /></td>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" value="Click to Submit Request" />
+
+<span style="display: block; font-size: 10px; color: gray; padding-top: 5px;"><a style="font-size: 10px; color: gray;" href="https://habazar.com" target="__blank">Email marketing by Habazar Internet Marketing</a></span></td>
+</tr>
+</tbody>
+</table>
+</form><script language="javascript">
+
+   function CheckMultiple1(frm, name) {
+    for (var i=0; i < frm.length; i++)
+    {
+     fldObj = frm.elements[i];
+     fldId = fldObj.id;
+     if (fldId) {
+      var fieldnamecheck=fldObj.id.indexOf(name);
+      if (fieldnamecheck != -1) {
+       if (fldObj.checked) {
+        return true;
+       }
+      }
+     }
+    }
+
+    return false;
+   }
+  function CheckForm1(f) {
+   if (f.email.value == "") {
+    alert("Please enter your email address.");
+    f.email.focus();
+    return false;
+   }
+  
+    if (f.captcha.value == "") {
+     alert("Please enter the security code shown");
+     f.captcha.focus();
+     return false;
+    }
+   
+   var fname = "CustomFields_2_1";
+   var fld = document.getElementById(fname);
+   if (fld.value == "") {
+    alert("Please enter a value for field First Name");
+    fld.focus();
+    return false;
+   }
+  
+   var fname = "CustomFields_3_1";
+   var fld = document.getElementById(fname);
+   if (fld.value == "") {
+    alert("Please enter a value for field Last Name");
+    fld.focus();
+    return false;
+   }
+  
+   var fname = "CustomFields_4_1";
+   var fld = document.getElementById(fname);
+   if (fld.value == "") {
+    alert("Please enter a value for field Phone");
+    fld.focus();
+    return false;
+   }
+  
+   var fname = "CustomFields_12_1";
+   var fld = document.getElementById(fname);
+   if (fld.value == "") {
+    alert("Please enter a value for field address");
+    fld.focus();
+    return false;
+   }
+  
+   var fname = "CustomFields_8_1";
+   var fld = document.getElementById(fname);
+   if (fld.value == "") {
+    alert("Please enter a value for field City");
+    fld.focus();
+    return false;
+   }
+  
+   var fname = "CustomFields_10_1";
+   var fld = document.getElementById(fname);
+   if (fld.value == "") {
+    alert("Please enter a value for field Postal/Zip Code");
+    fld.focus();
+    return false;
+   }
+  
+   var fname = "CustomFields_9_1";
+   var fld = document.getElementById(fname);
+   if (fld.value == "") {
+    alert("Please enter a value for field State");
+    fld.focus();
+    return false;
+   }
+  
+    return true;
+   };
+  
+</script>
+</div>
+</div>
+<div>
+<h3>Useful Links</h3>
+<br />
+<a href="http://texasmanandvan.s3-website.us-west-1.amazonaws.com/sitemap.html">Man And Van Locations</a>
+<br />
+<br />
+<a href="http://manandvanmovers1.s3-website.us-west-1.amazonaws.com/">#ManAndVanmovers (S3)</a>
+<br />
+<br />
+<a href="https://manandvanmovers.z5.web.core.windows.net/">#ManAndVanmovers (Azure)</a>
+<br />
+<br />
+<a href="https://storage.googleapis.com/manandvanmovers/index.html">#ManAndVanmovers (Gstore)</a>
+<br />
+<br />
+<a href="https://geofflord.github.io/manandvanmovers/">#ManAndVanmovers (Github)</a>
+<br />
+<br />
+<a href="https://geofflord.github.io/texasmanandvanmovers/">#TexasManAndVanmovers (GitHub)</a>
+<br />
+<br />
+<div align="center"><h3> FACEBOOK NEWS</h3></DIV>
+<div><div class="fb-page fb_iframe_widget" data-href="&lt;div class=" data-tabs="timeline" data-width="100%" data-height="1000" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+<iframe class="" title="fb:page Facebook Social Plugin" src="https://www.facebook.com/v3.2/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D44%23cb%3Df3573d6832a5744%26domain%3Dtexasmanandvan.com%26origin%3Dhttps%253A%252F%252Fmanandvanmoversnetwork%26relation%3Dparent.parent&amp;container_width=313&amp;height=600&amp;hide_cover=false&amp;href=https://www.facebook.com/manandvanmoversnetwork%2F&amp;locale=en_GB&amp;sdk=joey&amp;show_facepile=true&amp;small_header=true&amp;tabs=timeline&amp;width=500" name="f1215ae1ebe0278" width="100%" height="600px" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></div></div>
+<br />
+<br />
+<div align="center"><h3> TWITTER NEWS</h3></DIV>
+<div>
+<a class="twitter-timeline" data-width="295" data-height="800" href="https://twitter.com/TexasManAndVan?ref_src=twsrc%5Etfw">Tweets by TexasManAndVan</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+</div> 
         </div>
 </div>
 
